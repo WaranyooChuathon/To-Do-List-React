@@ -1,19 +1,20 @@
-import "./App.css";
-
-import Header from "./components/Header";
-import { IconExample } from "./components/Icon";
-import Image from "./components/Image";
-
+import Checkbox from "./components/Checkbox";
 
 function App() {
+  const todolist = [
+    { text: "coding react", isChecked: false },
+    { text: "doing documentation react", isChecked: true },
+    { text: "testing react", isChecked: false },
+  ];
+
   return (
-    <>
-    <Header />
-      <div>hello world</div>
-    <IconExample />
-    <Image 
-    imageUrl="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/133.png" />
-    </>
+    <div>
+      {todolist.map((todo, index) => {
+        return (
+          <Checkbox key={index} text={todo.text} isChecked={todo.isChecked} />
+        );
+      })}
+    </div>
   );
 }
 
