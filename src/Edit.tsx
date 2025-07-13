@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router";
 
 const API_URL = "https://6870d4e57ca4d06b34b83d5a.mockapi.io/todocs";
 
@@ -56,12 +57,35 @@ function Edit() {
 
   return (
     <>
-      <h2>Hello Edit Page {id}</h2>
+      <div className="flex items-center justify-between mb-4">
+        {/* ปุ่ม Back */}
+        <Link to="/">
+          <button className="btn btn-info">← Back</button>
+        </Link>
+        {/* หัวข้อ อยู่ตรงกลาง */}
+        <div className="flex-1 text-center text-2xl font-bold">
+          <h2>Hello Edit Page {id}</h2>
+        </div>
+        {/* ตัวหลอกซ้ายให้เท่ากับปุ่ม Back เพื่อดันตรงกลางจริง */}
+        <div className="w-[90px]" /> {/* ทำขนาดให้เท่ากับปุ่ม Back */}
+      </div>
       {todo ? (
-        <div>
-          <input type="text" value={todo.name} onChange={handleInputChange} />
+        <div className="space-y-2">
+          {/* บรรทัดที่ 1: input + button */}
+          <div className="flex items-center space-x-4">
+            <input
+              type="text"
+              placeholder="Warning"
+              className="input input-warning w-full"
+              value={todo.name}
+              onChange={handleInputChange}
+            />
+            <button className="btn btn-warning" onClick={updateName}>
+              Edit
+            </button>
+          </div>
+          {/* บรรทัดที่ 2: status */}
           <p>Status: {todo.status}</p>
-          <button onClick={updateName}>Edit</button>
         </div>
       ) : (
         <p>Loading...</p>

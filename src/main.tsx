@@ -26,8 +26,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-
+<div className="max-w-3xl	mx-auto	my-0 p-4">
     <RouterProvider router={router} />
+</div>
 
   </StrictMode>,
 )
