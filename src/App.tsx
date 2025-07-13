@@ -52,6 +52,7 @@ function App() {
 
   return (
     <>
+    <h1 className="text-2xl font-bold mb-4">To-Do List</h1>
     {loading && <div>Loading...</div>}
     {!loading && <div>Todos loaded successfully</div>}
       <div>
