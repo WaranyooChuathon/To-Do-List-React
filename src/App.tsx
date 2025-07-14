@@ -48,7 +48,7 @@ function App() {
   async function addTodo(name: string) {
     try {
       setLoading(true);
-      const newTodo = { name, status: "pending" };
+      const newTodo = { name, status: "Pending" };
       const response = await axios.post(API_URL, newTodo);
       console.log("Todo added successfully:", response.data);
       fetchTodos(); // Refresh the todo list after adding
