@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 import Edit from './Edit.tsx'
+import AppTemp from './AppTemp.tsx'
 
 
 import {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/todo/:id",
     element: <Edit></Edit>,
+  },
+  {
+    path: "/Apptemp",
+    element: <AppTemp></AppTemp>,
 
   }
 ]);

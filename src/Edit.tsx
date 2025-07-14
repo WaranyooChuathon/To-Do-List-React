@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router";
 
-const API_URL = "https://6870d4e57ca4d06b34b83d5a.mockapi.io/todocs";
+const API_URL = `${import.meta.env.VITE_BASE_API_URL}`;
 
 type Todo = {
   id: string;
