@@ -10,7 +10,7 @@ type Todo = {
 };
 
 const API_URL = `${import.meta.env.VITE_BASE_API_URL}`;
-const statuses = ["all", "done", "pending"]; // จำลองค่าจาก store
+
 
 function App() {
   // State to hold the list of todos
@@ -18,7 +18,7 @@ function App() {
   const [loading, setLoading] = useState<boolean>(true);
   const [newTodoName, setNewTodoName] = useState("");
 
-  const [statusFilter, setStatusFilter] = useState("all");
+
 
 
   // Function to fetch todos from the API
@@ -57,20 +57,6 @@ function App() {
       console.error("Error adding todo:", error);
     }
   }
-
-  async function updateTodoStatus(id: string, status: string) {
-    try {
-      setLoading(true);
-      console.log("Updating todo with id:", id, "to status:", status);
-      await axios.put(`${API_URL}/${id}`, { status });
-      fetchTodos(); // Refresh the todo list after updating
-      setLoading(false);
-    } catch (error) {
-      console.error("Error updating todo status:", error);
-    }
-  }
-
-  
 
 
 
