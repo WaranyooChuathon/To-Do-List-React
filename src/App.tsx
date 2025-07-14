@@ -123,6 +123,11 @@ function App() {
               ))}
             </div>
           </div>
+          <div className="flex items-center justify-between mb-4">
+            <Link to ="/Apptemp">
+            <button className="btn btn-warning px-3" >New UI </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>

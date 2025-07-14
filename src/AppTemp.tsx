@@ -159,6 +159,11 @@ function TodoApp() {
           </div>
         </div>
       ))}
+      <div>
+        <Link to="/">
+          <button className="btn btn-info">Back to Home</button>
+        </Link>
+      </div>
     </>
   );
 }
