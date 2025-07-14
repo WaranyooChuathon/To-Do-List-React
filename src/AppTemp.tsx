@@ -8,7 +8,7 @@ type Todo = {
   status: string;
 };
 
-const API_URL = "https://6870d4e57ca4d06b34b83d5a.mockapi.io/todocs";
+const API_URL = `${import.meta.env.VITE_BASE_API_URL}`;
 const STATUSES = ["Pending", "Doing", "Done"];
 
 function TodoApp() {
