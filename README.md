@@ -12,6 +12,8 @@ This project is basic to-do-list web app by React
 <img src="https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white">
 <img src="https://img.shields.io/badge/TailwindCSS-black?logo=tailwindcss&logoColor=DeepSkyBlue">
 <img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff">
+<img src="https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white">
+
 
 <img src="https://img.shields.io/badge/mockAIP-API-purple.svg" alt="License: AGPL">
 
